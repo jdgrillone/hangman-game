@@ -39,6 +39,7 @@ document.onkeyup = function(event) {
                 if (currentWord[j] === guess) {
                         answerArray[j] = guess;
         		document.getElementById("letters").innerHTML = answerArray.join(" ");
+
                 //if guess is NOT in current word...
                 }else if(lettersGuessed.indexOf(guess) < 0 ) {      
                         document.getElementById("lettersGuessed").innerHTML = lettersGuessed.join(" ");
