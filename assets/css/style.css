@@ -15,3 +15,7 @@ p {
 	max-width: 600px;
 	max-height: 400px;
 }
+
+#welcome {
+	color: lightgreen;
+}

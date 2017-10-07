@@ -9,13 +9,12 @@ var wordsList = [
                 "galaga",
 		];
 
-var lives = 12;
+var lives = 16;
 var lettersGuessed = [ ];
 var guess = "";
 
 //choose a random index from wordsList
 var currentWord = wordsList[Math.floor(Math.random() * wordsList.length)];
-
 
 //set up answerArray
 var answerArray = [];
@@ -23,10 +22,8 @@ for (var i = 0; i < currentWord.length; i++){
 	answerArray[i] = " _ ";
 }
 
-//display answerArray to page
+//display answerArray and lives to page
 document.getElementById("letters").innerHTML = answerArray.join(" ");
-
-//display remaining lives to page
 document.getElementById("lives").innerHTML = lives;
 
 //listen for user input
