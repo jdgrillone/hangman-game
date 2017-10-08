@@ -7,6 +7,9 @@ var wordsList = [
 		"metroid",
                 "gauntlet",
                 "galaga",
+                "frogger",
+                "tetris",
+                "defender",
 		];
 
 var lives = 16;
@@ -38,6 +41,7 @@ document.onkeyup = function(event) {
         		document.getElementById("letters").innerHTML = answerArray.join(" ");
 
                 //if guess is NOT in current word...
+                /* Does not work properly.  Correct guesses still make it through the loop and end up in the lettersGuessed array and removing lives count */
                 }else if(lettersGuessed.indexOf(guess) < 0 ) {      
                         document.getElementById("lettersGuessed").innerHTML = lettersGuessed.join(" ");
                         lettersGuessed.push(guess);
@@ -53,6 +57,7 @@ document.onkeyup = function(event) {
                 }
         }
         //win condition when answer array no longer contains underscores
+        /* Does not work properly, page does not wait to load before giving this prompt.  So completed word is not shown when the last letter is guessed */
         if (answerArray.indexOf(" _ ") < 0 ) {
                 if(confirm('You Win! Click "Okay" to play again.')){
                 window.location.reload(); 
